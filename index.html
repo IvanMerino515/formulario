@@ -4,10 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.
     0">
-    <link rel="stylesheet" href="./assets/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Kode+Mono:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Document</title>
 </head>
 <body>
+
+<section class="background" id="background" >
+<!-- TARJETA TRASERA -->
+<div class="card-reverse" id="card-reverse">
+    <span class="text-card-reverse" id="text-card-reverse">000</span>
+</div>  
+
+<!-- TARJETA FRONTAL -->
+<div class="card-front" id="card-front" >
+<img class="logo" src="./assets/images/card-logo.svg" alt="logo">
+
+<span class="serial-number" id="serial-number" >0000000000000000</span>
+<div class="text-card">
+ <span class="name" id="name" >Jane Applessed</span>
+ <span class="date" id="date" >00/00</span>   
+</div>
+</div>
+</section>
+
+<main class="container" id="container" >
+
+    <form class="form" id="form" >
+
+        <label for="name" > CARDHOLDER NAME</label>
+        <input class="name input" id="name" type="text" name="nombre"> 
+
+        <label for="card-number" > CARD NUMBER</label>
+        <input class="card-number input" id="card-number" type="number" name="card-number">
+        <span class="failed" id="failed" >Wrong format, numbers only</span> 
+        
+
+        <div class="card-data" id="card-data" >
+            <div class="exp-date-flex">
+                <label for="exp-date" > EXP.DATE</label>
+                <input class="exp-date input" id="exp-date" type="number"  name="exp-date">
+                
+            </div>
+            <div class="year-flex">
+                <label for="year" > (MM/YY)</label>
+                <input class="year input" id="year" type="number" name="year">
+            </div>
+            <div class="cvc-flex">
+                <label for="cvc" > CVC</label>
+                <input class="cvc input" id="cvc" type="number" name="cvc">
+                
+            </div>
+            
+        </div>
+        <span class="failed" id="failed" >Can`t be blank</span>
+
+        <input type="submit" class="button" name="button" id="button" value="confirm">
+        
+
+        
+    </form>
+
+
+
+</main>
+
     
+<script src="./js/scripts" ></script>
 </body>
 </html>
