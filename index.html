@@ -11,11 +11,11 @@
     <title>Document</title>
 </head>
 <body>
-
+<section class="full-container">
 <section class="background" id="background" >
 <!-- TARJETA TRASERA -->
 <div class="card-reverse" id="card-reverse">
-    <span class="text-card-reverse" id="text-card-reverse">000</span>
+    <span class="text-card-reverse" id="cvc-display">000</span>
 </div>  
 
 <!-- TARJETA FRONTAL -->
@@ -34,32 +34,37 @@
 
     <form class="form" id="form" >
 
-        <label for="name" > CARDHOLDER NAME</label>
-        <input class="name input" id="name" type="text" name="nombre"> 
-
-        <label for="card-number" > CARD NUMBER</label>
-        <input class="card-number input" id="card-number" type="number" name="card-number">
-        <span class="failed" id="failed" >Wrong format, numbers only</span> 
         
 
-        <div class="card-data" id="card-data" >
-            <div class="exp-date-flex">
-                <label for="exp-date" > EXP.DATE</label>
-                <input class="exp-date input" id="exp-date" type="number"  name="exp-date">
-                
-            </div>
-            <div class="year-flex">
-                <label for="year" > (MM/YY)</label>
-                <input class="year input" id="year" type="number" name="year">
-            </div>
-            <div class="cvc-flex">
-                <label for="cvc" > CVC</label>
-                <input class="cvc input" id="cvc" type="number" name="cvc">
-                
-            </div>
-            
+<label for="cardholder-name">CARDHOLDER NAME</label>
+<input class="name input" id="cardholder-name" type="text" name="nombre">
+<span id="failed-name-error" class="failed-name-error">Can’t be blank</span>
+
+<label for="card-number">CARD NUMBER</label>
+<input class="card-number input" id="card-number" type="number" name="card-number">
+<span id="failed-number-error" class="failed-number-error">Can’t be blank</span>
+
+<div class="card-data">
+        <div class="exp-data-flex">
+            <label for="exp-date exp-date">EXP.DATE</label>
+            <input class="exp-date input" id="exp-date" type="number" name="exp-date">
+        </div>  
+
+        <div class="year-flex">
+            <label for="year">YEAR</label>
+            <input class="year input" id="year" type="number" name="year">
         </div>
-        <span class="failed" id="failed" >Can`t be blank</span>
+        
+        <div class="cvc-flex">
+
+        <label for="cvc">CVC</label>
+        <input class="cvc input" id="cvc" type="number" name="cvc">
+        </div>
+</div>
+                
+
+        <span class="failed-name-error" id="failed-name-error" >Can`t be blank</span>
+
 
         <input type="submit" class="button" name="button" id="button" value="confirm">
         
@@ -70,8 +75,9 @@
 
 
 </main>
-
+</section>
     
-<script src="./js/scripts" ></script>
+<script src="./js/scripts.js"></script>
+
 </body>
 </html>

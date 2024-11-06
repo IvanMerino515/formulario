@@ -27,7 +27,20 @@ margin-bottom: 0;
 
 body{
 margin:0;
+
 }
+
+@media screen and (width > 768px){
+
+.full-container{
+display: flex;
+flex-direction: row;
+
+}
+}
+
+
+
 
 .background{
 display: flex;
@@ -39,6 +52,17 @@ background-repeat: no-repeat;
 background-size:cover;
 }
 
+@media screen and (width > 768px){
+.background{
+background-image: url(../assets/images/bg-main-desktop.png);
+width: 483px;
+height:100vh;
+}
+
+}
+
+
+
 .card-reverse{
 width: 286px;
 height: 157px;
@@ -49,6 +73,17 @@ margin-left: 73px;
 margin-top: 32px;
 position: relative;
 }
+
+@media screen and (width > 768px){
+.card-reverse{
+width: 447px;
+height: 245px;
+margin-left: 300px;
+margin-top: 400px;
+box-shadow: 90px 15% black ;
+    
+    }
+    }
 
 .text-card-reverse{
 font-family: "Space Grotesk";
@@ -62,6 +97,15 @@ color: white;
 position: absolute;
 }
 
+@media screen and (width > 768px){
+.text-card-reverse{
+margin-top: 110px;
+margin-left: 360px;
+font-size: 14px ;
+        
+    }
+    }
+
 .card-front{
 width: 285px;
 height: 156.20px;
@@ -73,11 +117,28 @@ margin-top: 126px;
 position: absolute;
 }
 
+@media screen and (width > 768px){
+.card-front{
+width: 447px;
+height: 245px;
+margin-left: 173px;
+box-shadow: 90px 15% black ;
+
+}
+}
+
 .logo{
 width: 54px;
 height: 30px;
 margin-top: 17.6px;
 margin-left: 19px;
+}
+
+@media screen and (width > 768px){
+.logo{
+width: 84px;
+height: 47px;
+
 }
 
 .serial-number{
@@ -90,6 +151,13 @@ margin-left: 20px;
 margin-top: 34px;
 }
 
+@media screen and (width > 768px){
+.serial-number{
+font-size: 28px;    
+}
+
+}
+
 .text-card{
 display: flex;
 font-size: 9px;
@@ -98,6 +166,12 @@ color: white;
 font-family: "Space Grotesk";
 margin-left: 20px;
 margin-right: 40px;
+}
+
+@media screen and (width > 768px){
+.text-card{
+font-size: 14px;    
+}   
 }
 
 /* variables formulario */
@@ -128,6 +202,13 @@ font-size: var(--text-form-size);
 gap: 10px;
 }
 
+@media screen and (width > 768px){
+.form{
+margin-left: 480px;
+margin-top: 120px;
+}
+}
+
 .input{
 border-radius: var(--border-radius-form);
 border-color: var(--border-form);
@@ -136,9 +217,24 @@ height: var(--height-input);
 
 }
 
-.failed{
+.input-error{
+border: 1px solid var(--border-alert);
+
+}
+
+
+
+.failed-number-error{
 color: var(--border-alert);
 margin-top: 10px;
+display: none;
+}
+
+.failed-name-error{
+color: var(--border-alert);
+margin-top: 10px;
+display: none;
+
 }
 
 .card-data{
@@ -147,15 +243,21 @@ flex-direction: row;
 
 }
 
+@media screen and (width > 768px){
+.card-data{
+
+
+}
+}
+
 .exp-date-flex .year-flex .cvc-flex{
 display: flex;
 flex-direction: column;
 margin-right: 125px;
 gap: 0px;
-
-
-
 }
+
+
 
 .exp-date{
 width:72px;
@@ -166,6 +268,7 @@ margin-top: 5px;
 .year{
 width: 72px;
 margin-top: 5px;
+margin-right: 20px;
 
 }
 
@@ -175,13 +278,37 @@ margin-top: 5px;
 
 }
 
+@media screen and (width > 768px){
+.cvc{
+display: flex;
+flex-direction: column;
+}
+}
+
+@media screen and (width > 768px){
+.year{
+display: flex;
+flex-direction: column; 
+margin-left: 8px;        
+}
+}
+
+@media screen and (width > 768px){
+.exp-date{
+display: flex;
+flex-direction: column;
+
+        
+        
+}
+}
+
 .button{
 background-color: var(--text-color-font);
 color: white;
 height: 53px;
+margin-top: 20px;
 border-radius: var(--border-radius-form);
 font-family: "Space Grotesk";
 font-size: 18px;
-
-
 }
