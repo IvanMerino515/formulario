@@ -41,24 +41,24 @@
 <span id="failed-name-error" class="failed-name-error">Can’t be blank</span>
 
 <label for="card-number">CARD NUMBER</label>
-<input class="card-number input" id="card-number" type="number" name="card-number">
+<input  class="card-number input" id="card-number" type="number" name="card-number" maxlength="16" /> 
 <span id="failed-number-error" class="failed-number-error">Can’t be blank</span>
 
 <div class="card-data">
         <div class="exp-data-flex">
             <label for="exp-date exp-date">EXP.DATE</label>
-            <input class="exp-date input" id="exp-date" type="number" name="exp-date">
+            <input maxlength="2" class="exp-date input" id="exp-date" type="number" name="exp-date">
         </div>  
 
         <div class="year-flex">
             <label for="year">YEAR</label>
-            <input class="year input" id="year" type="number" name="year">
+            <input maxlength="2" class="year input" id="year" type="number" name="year">
         </div>
         
         <div class="cvc-flex">
 
         <label for="cvc">CVC</label>
-        <input class="cvc input" id="cvc" type="number" name="cvc">
+        <input maxlength="3" class="cvc input" id="cvc" type="number" name="cvc">
         </div>
 </div>
                 

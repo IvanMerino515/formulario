@@ -22,20 +22,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // escritura card number;
-    cardNumber.addEventListener("input", () => {
-        if (cardNumber.value.length > 16) {
-            cardNumber.value = cardNumber.value.substring(0,30);
-        }
+     cardNumber.addEventListener("input", () => {
+         if (cardNumber.value.length > 16) {
+             cardNumber.value = cardNumber.value.substring(0,16);
+     }
 
-        writteSerialNumber.textContent = cardNumber.value;
+         writteSerialNumber.textContent = cardNumber.value;
 
-    })
+     })
+
+
 
 // escritura Nombre;
 
     name.addEventListener("input", () => {
         if(name.value.length >20){
-            name.value = name.value;
+            name.value = name.value.substring(0,20);
         }
 
         writeName.textContent = name.value;
@@ -44,16 +46,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // escritura Fecha;
 
-    const updateDateDisplay = () =>{
-        writeDate.textContent = `${expDate.value} / ${year.value}`;
-    };
+     const updateDateDisplay = () =>{
+     writeDate.textContent = `${expDate.value} / ${year.value}`;
+     };
 
-    expDate.addEventListener("input", updateDateDisplay);
-    year.addEventListener("input", updateDateDisplay);
+     expDate.addEventListener("input", updateDateDisplay);
+     year.addEventListener("input", updateDateDisplay);
+
+  
 
 // Escritura CVC; 
 
-
+// cvc.addEventListener("input", () =>{
+//     if(cvc.value.length >3){
+//         cvc.value = cvc.value.substring(0,3);
+//     }
+// })
+  
+// cvcDisplay.textContent = cvcDisplay.value;
 
  
    
