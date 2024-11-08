@@ -243,12 +243,7 @@ flex-direction: row;
 
 }
 
-@media screen and (width > 768px){
-.card-data{
 
-
-}
-}
 
 .exp-date-flex .year-flex .cvc-flex{
 display: flex;
@@ -311,4 +306,4 @@ margin-top: 20px;
 border-radius: var(--border-radius-form);
 font-family: "Space Grotesk";
 font-size: 18px;
-}
+}}
